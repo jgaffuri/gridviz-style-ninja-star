@@ -1,0 +1,47 @@
+{
+    "name": "gridviz-style-ninja-star",
+    "version": "0.0.1",
+    "description": "Gridviz style for ninja star symbols",
+    "keywords": [],
+    "homepage": "https://github.com/eurostat/gridviz-ninja-star",
+    "author": "Joseph Davies, Julien Gaffuri",
+    "license": "EUPL-1.2",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/eurostat/gridviz-ninja-star.git"
+    },
+    "bugs": {
+        "url": "https://github.com/eurostat/gridviz-ninja-star/issues",
+        "email": "Joseph.DAVIES@ext.ec.europa.eu"
+    },
+    "main": "dist/gridviz-style-ninja-star.min.js",
+    "scripts": {
+        "start": "export NODE_OPTIONS=--openssl-legacy-provider && webpack --config webpack.config.dev.js",
+        "start-dev": "webpack --config webpack.config.dev.js",
+        "server": "webpack serve -c webpack.config.dev.js --static ./",
+        "doc": "./node_modules/.bin/jsdoc src/ src/dataset src/legend src/style -d docs/jsdoc",
+        "build": "webpack --config webpack.config.prod.js",
+        "test": "jest"
+    },
+    "files": [
+        "dist/gridviz-style-ninja-star.min.js"
+    ],
+    "dependencies": {
+    },
+    "devDependencies": {
+        "gridviz": "^2.0.22",
+        "@babel/core": "^7.9.0",
+        "@babel/plugin-transform-runtime": "^7.12.1",
+        "@babel/preset-env": "^7.9.0",
+        "@babel/runtime": "^7.12.1",
+        "babel-loader": "^8.1.0",
+        "jest": "^26.6.1",
+        "jshint": "^2.12.0",
+        "prettier": "2.8.8",
+        "puppeteer": "^9.1.1",
+        "webpack": "^5.75.0",
+        "webpack-cli": "^5.0.0",
+        "webpack-dev-server": "^4.11.1",
+        "webpack-livereload-plugin": "^3.0.2"
+    }
+}
