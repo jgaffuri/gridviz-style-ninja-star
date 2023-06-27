@@ -3,4 +3,3 @@
 
 //export styles
 export { NinjaStarStyle } from './NinjaStarStyle'
-

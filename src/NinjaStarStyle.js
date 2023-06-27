@@ -1,12 +1,22 @@
 //@ts-check
 'use strict'
 
-import { Style } from '../Style'
+//import Style from 'gridviz'
+//import GeoCanvas from 'gridviz'
+//import Dataset from 'gridviz'
+//import Cell from 'gridviz'
+//import Shape from 'gridviz'
+//import Stat from 'gridviz'
+//import { gviz } from 'gridviz'
+//import * from 'gridviz'
+//import { Something1 as MySomething } from "my-module.js"
+
 
 /**
  * @author Joseph Davies, Julien Gaffuri
  */
 export class NinjaStarStyle extends Style {
+
     /** @param {object} opts */
     constructor(opts) {
         super(opts)
@@ -17,7 +27,7 @@ export class NinjaStarStyle extends Style {
         this.colorCol = opts.colorCol
 
         /** A function returning the color of the cell.
-         * @type {function(number,number,import("../Style").Stat|undefined,number):string} */
+         * @type {function(number,number, Style.Stat|undefined,number):string} */
         this.color = opts.color || (() => '#EA6BAC') //(v,r,s,zf) => {}
 
         /** The name of the column/attribute of the tabular data where to retrieve the variable for size.
@@ -25,20 +35,23 @@ export class NinjaStarStyle extends Style {
         this.sizeCol = opts.sizeCol
 
         /** A function returning the size of a cell in geographical unit.
-         * @type {function(number,number,import("../Style").Stat|undefined,number):number} */
+         * @type {function(number,number,Style.Stat|undefined,number):number} */
         this.size = opts.size
 
         /** A function returning the shape of a cell.
-         * @type {function(import("../Dataset").Cell):import("../Style").Shape} */
+         * @type {function(Dataset.Cell):Style.Shape} */
         this.shape = opts.shape || (() => 'square')
     }
+
+
+    //import("../GeoCanvas").GeoCanvas
 
     /**
      * Draw cells as squares, with various colors and size.
      *
-     * @param {Array.<import("../Dataset").Cell>} cells
+     * @param {Array.<Dataset.Cell>} cells
      * @param {number} r
-     * @param {import("../GeoCanvas").GeoCanvas} cg
+     * @param {GeoCanvas} cg
      */
     draw(cells, r, cg) {
 
@@ -80,7 +93,7 @@ export class NinjaStarStyle extends Style {
             if (shape === 'none') continue
 
             //size
-            /** @type {function(number,number,import("../Style").Stat|undefined,number):number} */
+            /** @type {function(number,number,Style.Stat|undefined,number):number} */
             let s_ = this.size || (() => r)
             //size - in geo unit
             const sG = s_(cell[this.sizeCol], r, statSize, zf)
