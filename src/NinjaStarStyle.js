@@ -4,6 +4,7 @@
 import { Style, Dataset, Stat, GeoCanvas } from 'gridviz'
 
 
+
 /**
  * @author Joseph Davies, Julien Gaffuri
  */

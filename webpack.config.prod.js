@@ -2,7 +2,7 @@ module.exports = {
     mode: 'production',
     output: {
         filename: 'gridviz-style-ninja-star.min.js',
-        library: 'gviz',
+        library: 'gviz-nssty',
         libraryTarget: 'umd',
     },
     module: {

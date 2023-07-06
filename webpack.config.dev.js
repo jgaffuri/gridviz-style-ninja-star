@@ -5,7 +5,7 @@ module.exports = {
     mode: 'development',
     output: {
         filename: 'gridviz-style-ninja-star.js',
-        library: 'gviz',
+        library: 'gviz-nssty',
         libraryTarget: 'umd',
     },
     plugins: [new LiveReloadPlugin()],
