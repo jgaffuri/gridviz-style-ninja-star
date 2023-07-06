@@ -1,15 +1,7 @@
 //@ts-check
 'use strict'
 
-//import Style from 'gridviz'
-//import GeoCanvas from 'gridviz'
-//import Dataset from 'gridviz'
-//import Cell from 'gridviz'
-//import Shape from 'gridviz'
-//import Stat from 'gridviz'
-//import { gviz } from 'gridviz'
-//import * from 'gridviz'
-//import { Something1 as MySomething } from "my-module.js"
+import { Style, Dataset, Stat, GeoCanvas } from 'gridviz'
 
 
 /**

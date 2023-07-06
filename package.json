@@ -27,9 +27,9 @@
         "dist/gridviz-style-ninja-star.min.js"
     ],
     "dependencies": {
+        "gridviz": "^2.0.33"
     },
     "devDependencies": {
-        "gridviz": "^2.0.23",
         "@babel/core": "^7.9.0",
         "@babel/plugin-transform-runtime": "^7.12.1",
         "@babel/preset-env": "^7.9.0",
